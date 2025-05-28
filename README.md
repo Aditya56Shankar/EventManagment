@@ -42,28 +42,28 @@ A RESTful API for managing events and bookings built with Node.js, Express, and 
 
 ### Authentication
 
-- `POST /api/auth/register` - Register a new user
-- `POST /api/auth/login` - Login user
+- `POST /auth/register` - Register a new user
+- `POST /auth/login` - Login user
 
 ### Events
 
-- `GET /api/events` - Get all events (public)
-- `GET /api/events/:id` - Get single event (public)
-- `POST /api/events` - Create event (admin only)
-- `PUT /api/events/:id` - Update event (admin only)
-- `DELETE /api/events/:id` - Delete event (admin only)
+- `GET /events` - Get all events (public)
+- `GET /events/:id` - Get single event (public)
+- `POST /events` - Create event (admin only)
+- `PUT /events/:id` - Update event (admin only)
+- `DELETE /events/:id` - Delete event (admin only)
 
 ### Bookings
 
-- `GET /api/bookings/my-bookings` - Get user's bookings
-- `POST /api/bookings/:eventId` - Book an event
-- `DELETE /api/bookings/:bookingId` - Cancel booking
+- `GET /bookings/my-bookings` - Get user's bookings
+- `POST /bookings/:eventId` - Book an event
+- `DELETE /bookings/:bookingId` - Cancel booking
 
 ## Request/Response Examples
 
 ### Register User
 ```http
-POST /api/auth/register
+POST /auth/register
 Content-Type: application/json
 
 {
@@ -74,7 +74,7 @@ Content-Type: application/json
 
 ### Create Event (Admin)
 ```http
-POST /api/events
+POST /events
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -89,7 +89,7 @@ Content-Type: application/json
 
 ### Book Event
 ```http
-POST /api/bookings/:eventId
+POST /bookings/:eventId
 Authorization: Bearer <token>
 ```
 
